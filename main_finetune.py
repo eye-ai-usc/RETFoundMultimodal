@@ -27,6 +27,7 @@ from util.datasets import build_dataset
 from util.pos_embed import interpolate_pos_embed
 from util.misc import NativeScalerWithGradNormCount as NativeScaler
 from engine_finetune import train_one_epoch, evaluate
+from util.configure import RETFoundArgs
 
 # =========================
 faulthandler.enable()
@@ -132,7 +133,9 @@ def get_args_parser():
     parser.add_argument("--enhance", action="store_true", default=False)
     parser.add_argument("--datasets_seed", default=2026, type=int)
 
-    return parser
+    # Parse CLI and convert to dataclass replacement
+    namespace = parser.parse_args()
+    return RETFoundArgs.from_namespace(namespace)
 
 
 # =========================
@@ -438,7 +441,6 @@ def main(args, criterion):
 
 if __name__ == "__main__":
     args = get_args_parser()
-    args = args.parse_args()
 
     criterion = torch.nn.CrossEntropyLoss()
 
