@@ -27,7 +27,7 @@ from util.datasets import build_dataset
 from util.pos_embed import interpolate_pos_embed
 from util.misc import NativeScalerWithGradNormCount as NativeScaler
 from engine_finetune import train_one_epoch, evaluate
-from util.configure import RETFoundArgs
+from RETFound.configure import RETFoundArgs
 
 # =========================
 faulthandler.enable()
