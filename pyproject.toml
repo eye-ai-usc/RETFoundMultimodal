@@ -31,7 +31,8 @@ packages = ["RETFound",  "util"]
 
 # List every top-level .py you want installed (without .py extension)
 py-modules = [
-  "models_vit",
-  "engine_finetune",
-  "main_finetune"
+    "models_vit",
+    "engine_finetune",
+    "main_finetune",
+    "utils.configure"
 ]
