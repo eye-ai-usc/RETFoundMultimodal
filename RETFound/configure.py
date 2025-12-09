@@ -19,7 +19,7 @@ class RETFoundArgs:
         epochs (int): Number of training epochs. Default: 50.
         accum_iter (int): Gradient accumulation steps. Default: 1.
 
-        model (str): Model entry in models_vit.py. Default: "vit_large_patch16".
+        model (str): Model entry in models_vit.py. Default: "RETFound_mae".
         model_arch (str): Backbone architecture key (e.g., dinov3_vits16). Default: "dinov3_vits16".
         input_size (int): Image input size. Default: 256.
         drop_path (float): Drop path rate. Default: 0.2.
@@ -90,8 +90,8 @@ class RETFoundArgs:
     accum_iter: int = 1
 
     # ---- Model parameters
-    model: str = "vit_large_patch16"
-    model_arch: str = "dinov3_vits16"
+    model: str = "RETFound_mae"
+    model_arch: str = "retfound_mae"
     input_size: int = 256
     drop_path: float = 0.2
     global_pool: bool = True  # default set by parser.set_defaults
