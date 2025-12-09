@@ -33,6 +33,5 @@ packages = ["RETFound",  "util"]
 py-modules = [
     "models_vit",
     "engine_finetune",
-    "main_finetune",
-    "utils.configure"
+    "main_finetune"
 ]
